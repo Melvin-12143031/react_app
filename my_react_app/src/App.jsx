@@ -7,20 +7,26 @@ import UpdateObjectsArray from "./UpdateObjectsArray/UpdateObjectsArray.jsx"
 import ToDoList from "./ToDoList/ToDoList.jsx"
 import DigitalClock from "./DigitalClock/DigitalClock.jsx"
 import Stopwatch from "./Stopwatch/Stopwatch.jsx"
+import ColorPickerContainer from "./ColorPicker/ColorPickerContainer.jsx";
+import Navbar from "./NavBar.jsx"
+
 
 function App() {
-  
-//return(<Counter />)
-//return(<OnChanged />)
-//return(<ColorPicker />)
-//return(<UpdaterSpread />)
-//return(<UpdateStateArray />)
-//return(<UpdateObjectsArray />)
-//return(<ToDoList />)
-//return(<DigitalClock />)
-return(<Stopwatch />)
 
+    //return(<Counter />)
+  //return(<OnChanged />)
+  //return(<ColorPicker />)
+  //return(<UpdaterSpread />)
+  //return(<UpdateStateArray />)
+  //return(<UpdateObjectsArray />)
+  //return(<ToDoList />)
+  //return(<DigitalClock />)
+  return (
 
+    
+    <Navbar />
+    
+  )
 }
 
 export default App
