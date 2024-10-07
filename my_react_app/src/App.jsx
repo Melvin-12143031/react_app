@@ -1,32 +1,39 @@
-import Counter from "./Counter/Counter.jsx"
-import OnChanged from './OnChanged/OnChanged.jsx'
-import ColorPicker from './ColorPicker/ColorPicker.jsx'
-import UpdaterSpread from "./UpdaterSpread/UpdaterSpread.jsx"
-import UpdateStateArray from "./UpdateStateArray/UpdateStateArray.jsx"
-import UpdateObjectsArray from "./UpdateObjectsArray/UpdateObjectsArray.jsx"
-import ToDoList from "./ToDoList/ToDoList.jsx"
-import DigitalClock from "./DigitalClock/DigitalClock.jsx"
-import Stopwatch from "./Stopwatch/Stopwatch.jsx"
-import ColorPickerContainer from "./ColorPicker/ColorPickerContainer.jsx";
-import Navbar from "./NavBar.jsx"
+import Navbar from "./Navbar.jsx";
+import './Navbar.css';
+import Pricing from "./pages/Pricing.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Footer from "./Footer.jsx";
+import ColorPickerContainer from "./Pages/ColorPickerContainer.jsx";
+import StopwatchContainer from "./Pages/StopwatchContainer.jsx";
+import UpdaterSpreadContainer from "./Pages/UpdaterSpreadContainer.jsx";
+import UpdateStateArrayContainer from "./Pages/UpdateStateArrayContainer.jsx";
+import { Route, Routes } from "react-router-dom";
 
 
 function App() {
 
-    //return(<Counter />)
-  //return(<OnChanged />)
-  //return(<ColorPicker />)
-  //return(<UpdaterSpread />)
-  //return(<UpdateStateArray />)
-  //return(<UpdateObjectsArray />)
-  //return(<ToDoList />)
-  //return(<DigitalClock />)
   return (
+    <>
+      <Navbar />
+      <main className="container">
 
-    
-    <Navbar />
-    
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/colorpickercontainer" element={<ColorPickerContainer />} />
+          <Route path="/Stopwatchcontainer" element={<StopwatchContainer />} />
+          <Route path="/UpdaterSpreadContainer" element={<UpdaterSpreadContainer />} />
+          <Route path="/UpdateStateArrayContainer" element={<UpdateStateArrayContainer />} />
+          
+
+        </Routes>
+      </main>
+      <Footer />
+    </>
   )
+
 }
 
 export default App
